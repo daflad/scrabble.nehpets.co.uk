@@ -60,6 +60,9 @@
   background-image: url("/public/img/tile.png");
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-box-shadow: inset 2px 2px 2px 0px #FFFFFF, inset -2px 0px 2px 0px #000000;
+  -moz-box-shadow: inset 2px 2px 2px 0px #FFFFFF, inset -2px 0px 2px 0px #000000;
+  box-shadow: inset 2px 2px 2px 0px #FFFFFF, inset -2px 0px 2px 0px #000000;
 }
 
 .points {
@@ -75,4 +78,11 @@
   background-image: url("/public/img/centre-star.png");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.board-egde {
+  padding: 50px;
+  background-color: darkgreen;
+  height: 1000px;
+  width: 1000px;
 }
