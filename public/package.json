@@ -1,0 +1,16 @@
+{
+  "name": "scrabble.nehpets.co.uk",
+  "version": "1.0.0",
+  "description": "A scrabble game for the family chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1"
+  }
+}
