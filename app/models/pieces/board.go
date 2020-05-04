@@ -196,7 +196,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[7][11] = newTile(DoubleLetter)
 	b.Tiles[7][12] = newTile(DefualtTile)
 	b.Tiles[7][13] = newTile(DefualtTile)
-	b.Tiles[7][14] = newTile(TripleLetter)
+	b.Tiles[7][14] = newTile(TripleWord)
 
 	// Row 9
 	b.Tiles[8][0] = newTile(DefualtTile)
