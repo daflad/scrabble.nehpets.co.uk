@@ -10,7 +10,7 @@ mostly because bandwidth is too low to have so many videos going.
 
 ### Go to http://localhost:9000/ and you'll see:
 
-  [demo]: https://github.com/daflad/scrabble.nehpets.co.uk/public/img/demo.png "Demo board"
+  [demo]: https://raw.githubusercontent.com/daflad/scrabble.nehpets.co.uk/master/public/img/demo.png "Demo board"
 
 ## Code Layout
 
