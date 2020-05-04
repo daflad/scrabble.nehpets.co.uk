@@ -8,45 +8,51 @@
     </div>
   </div>
 </div>
-
-<div class="container-fluid">
-  <div class="board">
-    <table>
-      {{range .board.Tiles}}
-        <tr>
-          {{range .}}
-            <td class="tile {{if ne .Type 1}}highlight-tile{{else}}shadow-tile{{end}} {{.CSS}}">
-              {{if ne .Type 1}}
-                {{if ne .CSS "double-word centre-star"}}
-                  {{.Type}}
-                {{end}}
-                {{if ne .Value ""}}
-                  {{raw .Value}}
-                {{end}}
-              {{end}}
-            </td>
-          {{end}}
-        </tr>
-      {{end}}
-    </table>
+<div class="container">
+  <div class="row">
+    <img src="/public/img/Scrabble-logo.png" alt="">    
   </div>
-  <div class="pieces">
-    <table>
-      {{range .board.Tiles}}
-        <tr>
-          {{range .}}
-            <td class="letter {{if ne .Value ""}}placed{{end}}">
-              {{if ne .Value ""}}
-                {{.Value}}
-                <div class="points">
-                  {{.Points}}
-                </div>
-              {{end}}
-            </td>
-          {{end}}
-        </tr>
-      {{end}}
-    </table>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="board">
+      <table>
+        {{range .board.Tiles}}
+          <tr>
+            {{range .}}
+              <td class="tile {{if ne .Type 1}}highlight-tile{{else}}shadow-tile{{end}} {{.CSS}}">
+                {{if ne .Type 1}}
+                  {{if ne .CSS "double-word centre-star"}}
+                    {{.Type}}
+                  {{end}}
+                  {{if ne .Value ""}}
+                    {{raw .Value}}
+                  {{end}}
+                {{end}}
+              </td>
+            {{end}}
+          </tr>
+        {{end}}
+      </table>
+    </div>
+    <div class="pieces">
+      <table>
+        {{range .board.Tiles}}
+          <tr>
+            {{range .}}
+              <td class="letter {{if ne .Value ""}}placed{{end}}">
+                {{if ne .Value ""}}
+                  {{.Value}}
+                  <div class="points">
+                    {{.Points}}
+                  </div>
+                {{end}}
+              </td>
+            {{end}}
+          </tr>
+        {{end}}
+      </table>
+    </div>
   </div>
 </div>
 
