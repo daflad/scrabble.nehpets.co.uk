@@ -21,9 +21,9 @@ const (
 	Tiletypes = iota
 	DefualtTile
 	DoubleLetter
-	TrippleLetter
+	TripleLetter
 	DoubleWord
-	TrippleWord
+	TripleWord
 )
 
 // newTile for DefualtBoard
@@ -38,11 +38,11 @@ func cssClass(tt TileType) string {
 	case 2:
 		return "double-letter"
 	case 3:
-		return "tripple-letter"
+		return "triple-letter"
 	case 4:
 		return "double-word"
 	case 5:
-		return "tripple-word"
+		return "triple-word"
 	default:
 		return "default-tile"
 	}
@@ -52,9 +52,9 @@ func (t TileType) String() string {
 	names := []string{
 		"DEFAULT TILE",
 		"DOUBLE LETTER",
-		"TRIPPLE LETTER",
+		"TRIPLE LETTER",
 		"DOUBLE WORD",
-		"TRIPPLE WORD",
+		"TRIPLE WORD",
 	}
 	return names[t-1]
 }
@@ -62,21 +62,21 @@ func (t TileType) String() string {
 // DefualtBoard construct the empty board
 func DefualtBoard() (b Board) {
 	// Row 1
-	b.Tiles[0][0] = newTile(TrippleWord)
+	b.Tiles[0][0] = newTile(TripleWord)
 	b.Tiles[0][1] = newTile(DefualtTile)
 	b.Tiles[0][2] = newTile(DefualtTile)
 	b.Tiles[0][3] = newTile(DoubleLetter)
 	b.Tiles[0][4] = newTile(DefualtTile)
 	b.Tiles[0][5] = newTile(DefualtTile)
 	b.Tiles[0][6] = newTile(DefualtTile)
-	b.Tiles[0][7] = newTile(TrippleWord)
+	b.Tiles[0][7] = newTile(TripleWord)
 	b.Tiles[0][8] = newTile(DefualtTile)
 	b.Tiles[0][9] = newTile(DefualtTile)
 	b.Tiles[0][10] = newTile(DefualtTile)
 	b.Tiles[0][11] = newTile(DoubleLetter)
 	b.Tiles[0][12] = newTile(DefualtTile)
 	b.Tiles[0][13] = newTile(DefualtTile)
-	b.Tiles[0][14] = newTile(TrippleWord)
+	b.Tiles[0][14] = newTile(TripleWord)
 
 	// Row 2
 	b.Tiles[1][0] = newTile(DefualtTile)
@@ -84,11 +84,11 @@ func DefualtBoard() (b Board) {
 	b.Tiles[1][2] = newTile(DefualtTile)
 	b.Tiles[1][3] = newTile(DefualtTile)
 	b.Tiles[1][4] = newTile(DefualtTile)
-	b.Tiles[1][5] = newTile(TrippleLetter)
+	b.Tiles[1][5] = newTile(TripleLetter)
 	b.Tiles[1][6] = newTile(DefualtTile)
 	b.Tiles[1][7] = newTile(DefualtTile)
 	b.Tiles[1][8] = newTile(DefualtTile)
-	b.Tiles[1][9] = newTile(TrippleLetter)
+	b.Tiles[1][9] = newTile(TripleLetter)
 	b.Tiles[1][10] = newTile(DefualtTile)
 	b.Tiles[1][11] = newTile(DefualtTile)
 	b.Tiles[1][12] = newTile(DefualtTile)
@@ -148,19 +148,19 @@ func DefualtBoard() (b Board) {
 
 	// Row 6
 	b.Tiles[5][0] = newTile(DefualtTile)
-	b.Tiles[5][1] = newTile(TrippleLetter)
+	b.Tiles[5][1] = newTile(TripleLetter)
 	b.Tiles[5][2] = newTile(DefualtTile)
 	b.Tiles[5][3] = newTile(DefualtTile)
 	b.Tiles[5][4] = newTile(DefualtTile)
-	b.Tiles[5][5] = newTile(TrippleLetter)
+	b.Tiles[5][5] = newTile(TripleLetter)
 	b.Tiles[5][6] = newTile(DefualtTile)
 	b.Tiles[5][7] = newTile(DefualtTile)
 	b.Tiles[5][8] = newTile(DefualtTile)
-	b.Tiles[5][9] = newTile(TrippleLetter)
+	b.Tiles[5][9] = newTile(TripleLetter)
 	b.Tiles[5][10] = newTile(DefualtTile)
 	b.Tiles[5][11] = newTile(DefualtTile)
 	b.Tiles[5][12] = newTile(DefualtTile)
-	b.Tiles[5][13] = newTile(TrippleLetter)
+	b.Tiles[5][13] = newTile(TripleLetter)
 	b.Tiles[5][14] = newTile(DefualtTile)
 
 	// Row 7
@@ -181,7 +181,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[6][14] = newTile(DefualtTile)
 
 	// Row 8
-	b.Tiles[7][0] = newTile(TrippleWord)
+	b.Tiles[7][0] = newTile(TripleWord)
 	b.Tiles[7][1] = newTile(DefualtTile)
 	b.Tiles[7][2] = newTile(DefualtTile)
 	b.Tiles[7][3] = newTile(DoubleLetter)
@@ -196,7 +196,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[7][11] = newTile(DoubleLetter)
 	b.Tiles[7][12] = newTile(DefualtTile)
 	b.Tiles[7][13] = newTile(DefualtTile)
-	b.Tiles[7][14] = newTile(TrippleLetter)
+	b.Tiles[7][14] = newTile(TripleLetter)
 
 	// Row 9
 	b.Tiles[8][0] = newTile(DefualtTile)
@@ -217,19 +217,19 @@ func DefualtBoard() (b Board) {
 
 	// Row 10
 	b.Tiles[9][0] = newTile(DefualtTile)
-	b.Tiles[9][1] = newTile(TrippleLetter)
+	b.Tiles[9][1] = newTile(TripleLetter)
 	b.Tiles[9][2] = newTile(DefualtTile)
 	b.Tiles[9][3] = newTile(DefualtTile)
 	b.Tiles[9][4] = newTile(DefualtTile)
-	b.Tiles[9][5] = newTile(TrippleLetter)
+	b.Tiles[9][5] = newTile(TripleLetter)
 	b.Tiles[9][6] = newTile(DefualtTile)
 	b.Tiles[9][7] = newTile(DefualtTile)
 	b.Tiles[9][8] = newTile(DefualtTile)
-	b.Tiles[9][9] = newTile(TrippleLetter)
+	b.Tiles[9][9] = newTile(TripleLetter)
 	b.Tiles[9][10] = newTile(DefualtTile)
 	b.Tiles[9][11] = newTile(DefualtTile)
 	b.Tiles[9][12] = newTile(DefualtTile)
-	b.Tiles[9][13] = newTile(TrippleLetter)
+	b.Tiles[9][13] = newTile(TripleLetter)
 	b.Tiles[9][14] = newTile(DefualtTile)
 
 	// Row 11
@@ -289,11 +289,11 @@ func DefualtBoard() (b Board) {
 	b.Tiles[13][2] = newTile(DefualtTile)
 	b.Tiles[13][3] = newTile(DefualtTile)
 	b.Tiles[13][4] = newTile(DefualtTile)
-	b.Tiles[13][5] = newTile(TrippleLetter)
+	b.Tiles[13][5] = newTile(TripleLetter)
 	b.Tiles[13][6] = newTile(DefualtTile)
 	b.Tiles[13][7] = newTile(DefualtTile)
 	b.Tiles[13][8] = newTile(DefualtTile)
-	b.Tiles[13][9] = newTile(TrippleLetter)
+	b.Tiles[13][9] = newTile(TripleLetter)
 	b.Tiles[13][10] = newTile(DefualtTile)
 	b.Tiles[13][11] = newTile(DefualtTile)
 	b.Tiles[13][12] = newTile(DefualtTile)
@@ -301,20 +301,20 @@ func DefualtBoard() (b Board) {
 	b.Tiles[13][14] = newTile(DefualtTile)
 
 	// Row 15
-	b.Tiles[14][0] = newTile(TrippleWord)
+	b.Tiles[14][0] = newTile(TripleWord)
 	b.Tiles[14][1] = newTile(DefualtTile)
 	b.Tiles[14][2] = newTile(DefualtTile)
 	b.Tiles[14][3] = newTile(DoubleLetter)
 	b.Tiles[14][4] = newTile(DefualtTile)
 	b.Tiles[14][5] = newTile(DefualtTile)
 	b.Tiles[14][6] = newTile(DefualtTile)
-	b.Tiles[14][7] = newTile(TrippleWord)
+	b.Tiles[14][7] = newTile(TripleWord)
 	b.Tiles[14][8] = newTile(DefualtTile)
 	b.Tiles[14][9] = newTile(DefualtTile)
 	b.Tiles[14][10] = newTile(DefualtTile)
 	b.Tiles[14][11] = newTile(DoubleLetter)
 	b.Tiles[14][12] = newTile(DefualtTile)
 	b.Tiles[14][13] = newTile(DefualtTile)
-	b.Tiles[14][14] = newTile(TrippleWord)
+	b.Tiles[14][14] = newTile(TripleWord)
 	return
 }
