@@ -1,15 +1,16 @@
-# Welcome to Revel
+# Welcome to scrabble.nehpets.co.uk
 
-A high-productivity web framework for the [Go language](http://www.golang.org/).
+A Scrabble game to keep the family entertained during lockdown,
+mostly because bandwidth is too low to have so many videos going.
 
 
 ### Start the web server:
 
-   revel run myapp
+  revel run -a scrabble.nehpets.co.uk
 
 ### Go to http://localhost:9000/ and you'll see:
 
-    "It works"
+  [demo]: https://github.com/daflad/scabble.nehpets.co.uk/public/img/demo.png "Demo board"
 
 ## Code Layout
 
@@ -21,23 +22,15 @@ The directory structure of a generated Revel application:
 
     app/              App sources
         init.go       Interceptor registration
-        controllers/  App controllers go here
+        controllers/  App controllers here
+        controllers/  App models here
         views/        Templates directory
 
     messages/         Message files
 
     public/           Public static assets
         css/          CSS files
-        js/           Javascript files
-        images/       Image files
+        img/          Image files
+        node_modules/ Node based css & js files
 
     tests/            Test suites
-
-
-## Help
-
-* The [Getting Started with Revel](http://revel.github.io/tutorial/gettingstarted.html).
-* The [Revel guides](http://revel.github.io/manual/index.html).
-* The [Revel sample apps](http://revel.github.io/examples/index.html).
-* The [API documentation](https://godoc.org/github.com/revel/revel).
-
