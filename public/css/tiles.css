@@ -72,8 +72,9 @@
 .points {
   font-size: 10pt;
   position: relative;
+  text-align: right;
   top: -15px;
-  left: 40px;
+  left: 35px;
   width: 8px;
   height: 8px;
 }

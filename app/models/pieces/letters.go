@@ -1,8 +1,11 @@
 package pieces
 
 import (
+	"fmt"
 	"math/rand"
 	"time"
+
+	"github.com/revel/revel"
 )
 
 // Letter distribution & points
@@ -30,6 +33,10 @@ type Letter struct {
 	Position Location
 }
 
+func (l Letter) String() string {
+	return fmt.Sprintf("%s", l.Name)
+}
+
 // Location of a letter on the board
 type Location struct {
 	X int
@@ -43,7 +50,7 @@ type Bag struct {
 
 func letterFromSet(set []interface{}) (l Letter) {
 	l.Name = set[0].(string)
-	l.Value = set[1].(int)
+	l.Value = set[2].(int)
 	return
 }
 
@@ -51,21 +58,20 @@ func letterFromSet(set []interface{}) (l Letter) {
 func (b *Bag) Fill() {
 	b.Letters = make([]Letter, 0)
 	for _, set := range fullBag {
-		for _, el := range set {
-			for i := 0; i < el.([]interface{})[2].(int); i++ {
-				b.Letters = append(b.Letters, letterFromSet(el.([]interface{})))
-			}
+		for i := 0; i < set[1].(int); i++ {
+			b.Letters = append(b.Letters, letterFromSet(set))
 		}
 	}
 }
 
 // RandomRack build a rack of random letters from the bag
-func (b Bag) RandomRack(length int) (rack []Letter) {
+func (b *Bag) RandomRack(length int) (rack []Letter) {
 	rand.Seed(time.Now().UnixNano())
 	for i := 0; i < length; i++ {
 		index := rand.Intn(len(b.Letters))
 		rack = append(rack, b.Letters[index])
 		b.Letters = append(b.Letters[:index], b.Letters[index+1:]...)
 	}
+	revel.AppLog.Infof("%+v", rack)
 	return rack
 }
