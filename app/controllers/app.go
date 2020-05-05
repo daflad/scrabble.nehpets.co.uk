@@ -13,5 +13,7 @@ type App struct {
 // Index page for now
 func (c App) Index() revel.Result {
 	board := pieces.DefualtBoard()
-	return c.Render(board)
+	var bag pieces.Bag
+	bag.Fill()
+	return c.Render(board, bag)
 }
