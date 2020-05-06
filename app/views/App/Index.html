@@ -14,7 +14,7 @@
     <img src="/public/img/Scrabble-logo.png" style="padding-left: 172px;" alt="">
   </div>
 </div>
-<div class="container">
+<div class="container-fluid">
   <div class="row board-egde">
     <div class="board">
       <table>
@@ -54,7 +54,27 @@
         {{end}}
       </table>
     </div>
+    <div class="stats">
+      <h5>Stats</h5>
+      <div class="" id="bag">
+        <label class="stats-label" for="bag">Letters Remaining:</label>
+        <span class="stat-value">{{len .bag.Letters}}</span>
+      </div>
+      <table class="rack">
+        <tr>
+          {{range .rack}}
+            <td class="letter tile placed">
+              {{.Name}}
+              <div class="points">
+                {{.Value}}
+              </div>
+            </td>
+          {{end}}          
+        </tr>
+      </div>
+    </div>
   </div>
+
 </div>
 
 {{template "footer.html" .}}

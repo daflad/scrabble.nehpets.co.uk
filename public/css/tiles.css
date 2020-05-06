@@ -91,3 +91,24 @@
   height: 1000px;
   width: 1000px;
 }
+
+.stats {
+  position: relative;
+  left: 1000px;
+  width: 442px;
+  padding: 10px;
+  background-color: darkgreen;
+  color: white;
+}
+
+.stats-label {
+  width: 200px;
+}
+
+.stat-value {
+  padding-left: 30px;
+}
+
+.rack {
+  background-color: green;
+}
