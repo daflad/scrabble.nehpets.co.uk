@@ -36,6 +36,11 @@ func init() {
 	// revel.OnAppStart(ExampleStartupScript)
 	// revel.OnAppStart(InitDB)
 	// revel.OnAppStart(FillCache)
+	// String to upper case.
+	revel.TemplateFuncs["letterMarker"] = func(in int) string {
+		alph := "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		return string(alph[in])
+	}
 }
 
 // HeaderFilter adds common security headers

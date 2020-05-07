@@ -10,7 +10,14 @@
   font-weight: bold;
   color: #0E0E0E;
   text-align: center;
-  cursor: pointer;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  display: table-cell;
 }
 
 .highlight-tile {
@@ -47,6 +54,17 @@
 
 .board {
   position: absolute;
+}
+
+.position-marker {
+  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  height: 60px;
+  min-height: 60px;
+  max-height: 60px;
+  text-align: center;
+  color: white;
 }
 
 .pieces {
@@ -87,7 +105,6 @@
 }
 
 .board-egde {
-  padding: 50px;
   background-color: darkgreen;
   height: 1000px;
   width: 1000px;
@@ -95,7 +112,7 @@
 
 .stats {
   position: relative;
-  left: 1000px;
+  left: 1010px;
   width: 442px;
   padding: 10px;
   background-color: darkgreen;
@@ -114,7 +131,17 @@
   background-color: green;
 }
 
+.word {
+  background-color: sandybrown;
+  height: 10px;
+  width: 422px;
+}
+
 .stats-title {
-  position: relative;
-  left: 15px;
+  display: inline-block;
+}
+
+.tile>.grabbable-dummy {
+  border: 1px solid #d4d4d4;
+  background: repeating-linear-gradient(-45deg, #fff, #fff 4px, #d4d4d4 4px, #d4d4d4 5px);
 }

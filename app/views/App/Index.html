@@ -12,8 +12,27 @@
   <div class="row board-egde">
     <div class="board">
       <table>
-        {{range .board.Tiles}}
+        <tr>
+          <td class="position-marker"></td>
+          <td class="position-marker">1</td>
+          <td class="position-marker">2</td>
+          <td class="position-marker">3</td>
+          <td class="position-marker">4</td>
+          <td class="position-marker">5</td>
+          <td class="position-marker">6</td>
+          <td class="position-marker">7</td>
+          <td class="position-marker">8</td>
+          <td class="position-marker">9</td>
+          <td class="position-marker">10</td>
+          <td class="position-marker">11</td>
+          <td class="position-marker">12</td>
+          <td class="position-marker">13</td>
+          <td class="position-marker">14</td>
+          <td class="position-marker">15</td>
+        </tr>
+        {{range $i, $e := .board.Tiles}}
           <tr>
+            <td class="position-marker">{{letterMarker $i}}</td>
             {{range .}}
               <td class="tile {{if ne .Type 1}}highlight-tile{{else}}shadow-tile{{end}} {{.CSS}}">
                 {{if ne .Type 1}}
@@ -51,28 +70,35 @@
     <div class="stats">
       <img src="/public/img/Scrabble-logo.png" width="422" alt="">
       <div>
-        <img src="/public/img/dl_gopher.png" height="95" width="auto" alt="">
-        <h5 class="stats-title">Stats</h5>        
+        <img class="stats-title" src="/public/img/dl_gopher.png" height="125" width="auto" alt="">
+        <div class="stats-title" id="bag">
+          <h5 class="">Stats</h5>
+          <label class="stats-label" for="bag">Letters Remaining:</label>
+          <span class="stat-value">{{len .bag.Letters}}</span>
+        </div>
       </div>
-      <div class="" id="bag">
-        <label class="stats-label" for="bag">Letters Remaining:</label>
-        <span class="stat-value">{{len .bag.Letters}}</span>
-      </div>
-      <table class="rack">
-        <tr>
+
+      <div class="rack">
+        {{range .rack}}
+          <div class="letter tile placed item">
+            {{.Name}}
+            <div class="points">
+              {{.Value}}
+            </div>
+          </div>
+        {{end}}
+        <div class="word">
           {{range .rack}}
-            <td class="letter tile placed" draggable="true" >
-              {{.Name}}
-              <div class="points">
-                {{.Value}}
-              </div>
-            </td>
+            <div class="item letter">
+              &nbsp
+            </div>
           {{end}}
-        </tr>
+        </div>
       </div>
     </div>
   </div>
-
 </div>
-
+<script type="text/javascript">
+  document.querySelector(".rack").grabbable();
+</script>
 {{template "footer.html" .}}
