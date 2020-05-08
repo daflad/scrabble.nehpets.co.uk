@@ -128,12 +128,13 @@
 }
 
 .rack {
-  background-color: green;
+  background-color: sandybrown;
+  height: 140px;
 }
 
 .word {
-  background-color: sandybrown;
-  height: 10px;
+  background-color: saddlebrown;
+  height: 20px;
   width: 422px;
 }
 
