@@ -34,7 +34,7 @@
           <tr>
             <td class="position-marker">{{letterMarker $i}}</td>
             {{range .}}
-              <td class="tile {{if ne .Type 1}}highlight-tile{{else}}shadow-tile{{end}} {{.CSS}}">
+              <td class="tile {{if ne .Type 1}}highlight-tile{{else}} {{if ne .CSS "empty-tile"}}shadow-tile{{end}} {{end}} {{.CSS}}">
                 {{if ne .Type 1}}
                   {{if ne .CSS "double-word centre-star"}}
                     {{.Type}}

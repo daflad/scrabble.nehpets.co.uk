@@ -77,6 +77,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[0][12] = newTile(DefualtTile)
 	b.Tiles[0][13] = newTile(DefualtTile)
 	b.Tiles[0][14] = newTile(TripleWord)
+	b.Tiles[0][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 2
 	b.Tiles[1][0] = newTile(DefualtTile)
@@ -94,6 +95,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[1][12] = newTile(DefualtTile)
 	b.Tiles[1][13] = newTile(DoubleWord)
 	b.Tiles[1][14] = newTile(DefualtTile)
+	b.Tiles[1][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 3
 	b.Tiles[2][0] = newTile(DefualtTile)
@@ -111,6 +113,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[2][12] = newTile(DoubleWord)
 	b.Tiles[2][13] = newTile(DefualtTile)
 	b.Tiles[2][14] = newTile(DefualtTile)
+	b.Tiles[2][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 4
 	b.Tiles[3][0] = newTile(DoubleLetter)
@@ -128,6 +131,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[3][12] = newTile(DefualtTile)
 	b.Tiles[3][13] = newTile(DefualtTile)
 	b.Tiles[3][14] = newTile(DoubleLetter)
+	b.Tiles[3][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 5
 	b.Tiles[4][0] = newTile(DefualtTile)
@@ -145,6 +149,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[4][12] = newTile(DefualtTile)
 	b.Tiles[4][13] = newTile(DefualtTile)
 	b.Tiles[4][14] = newTile(DefualtTile)
+	b.Tiles[4][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 6
 	b.Tiles[5][0] = newTile(DefualtTile)
@@ -162,6 +167,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[5][12] = newTile(DefualtTile)
 	b.Tiles[5][13] = newTile(TripleLetter)
 	b.Tiles[5][14] = newTile(DefualtTile)
+	b.Tiles[5][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 7
 	b.Tiles[6][0] = newTile(DefualtTile)
@@ -179,6 +185,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[6][12] = newTile(DoubleLetter)
 	b.Tiles[6][13] = newTile(DefualtTile)
 	b.Tiles[6][14] = newTile(DefualtTile)
+	b.Tiles[6][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 8
 	b.Tiles[7][0] = newTile(TripleWord)
@@ -197,6 +204,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[7][12] = newTile(DefualtTile)
 	b.Tiles[7][13] = newTile(DefualtTile)
 	b.Tiles[7][14] = newTile(TripleWord)
+	b.Tiles[7][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 9
 	b.Tiles[8][0] = newTile(DefualtTile)
@@ -214,6 +222,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[8][12] = newTile(DoubleLetter)
 	b.Tiles[8][13] = newTile(DefualtTile)
 	b.Tiles[8][14] = newTile(DefualtTile)
+	b.Tiles[8][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 10
 	b.Tiles[9][0] = newTile(DefualtTile)
@@ -231,6 +240,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[9][12] = newTile(DefualtTile)
 	b.Tiles[9][13] = newTile(TripleLetter)
 	b.Tiles[9][14] = newTile(DefualtTile)
+	b.Tiles[9][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 11
 	b.Tiles[10][0] = newTile(DefualtTile)
@@ -248,6 +258,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[10][12] = newTile(DefualtTile)
 	b.Tiles[10][13] = newTile(DefualtTile)
 	b.Tiles[10][14] = newTile(DefualtTile)
+	b.Tiles[10][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 12
 	b.Tiles[11][0] = newTile(DoubleLetter)
@@ -265,6 +276,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[11][12] = newTile(DefualtTile)
 	b.Tiles[11][13] = newTile(DefualtTile)
 	b.Tiles[11][14] = newTile(DoubleLetter)
+	b.Tiles[11][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 13
 	b.Tiles[12][0] = newTile(DefualtTile)
@@ -282,6 +294,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[12][12] = newTile(DoubleWord)
 	b.Tiles[12][13] = newTile(DefualtTile)
 	b.Tiles[12][14] = newTile(DefualtTile)
+	b.Tiles[12][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 14
 	b.Tiles[13][0] = newTile(DefualtTile)
@@ -299,6 +312,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[13][12] = newTile(DefualtTile)
 	b.Tiles[13][13] = newTile(DoubleWord)
 	b.Tiles[13][14] = newTile(DefualtTile)
+	b.Tiles[13][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
 	// Row 15
 	b.Tiles[14][0] = newTile(TripleWord)
@@ -316,5 +330,24 @@ func DefualtBoard() (b Board) {
 	b.Tiles[14][12] = newTile(DefualtTile)
 	b.Tiles[14][13] = newTile(DefualtTile)
 	b.Tiles[14][14] = newTile(TripleWord)
+	b.Tiles[14][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+
+	// Row 15
+	b.Tiles[15][0] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][1] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][2] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][3] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][4] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][5] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][6] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][7] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][8] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][9] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][10] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][11] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][12] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][13] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][14] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[15][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 	return
 }
