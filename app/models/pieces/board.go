@@ -2,7 +2,7 @@ package pieces
 
 // Board the scrabble board to play on
 type Board struct {
-	Tiles [15][15]Tile
+	Tiles [16][16]Tile
 }
 
 // Tile the individual tiles of a scrabble board
