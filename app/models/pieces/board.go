@@ -349,5 +349,23 @@ func DefualtBoard() (b Board) {
 	b.Tiles[15][13] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 	b.Tiles[15][14] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 	b.Tiles[15][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+
+	// Row 15
+	b.Tiles[16][0] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][1] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][2] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][3] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][4] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][5] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][6] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][7] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][8] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][9] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][10] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][11] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][12] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][13] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][14] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
+	b.Tiles[16][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 	return
 }
