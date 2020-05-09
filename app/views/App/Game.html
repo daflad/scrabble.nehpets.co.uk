@@ -54,7 +54,7 @@
         {{range .board.Tiles}}
           <tr>
             {{range .}}
-              <td class="letter {{if ne .Value ""}}placed{{end}}"  draggable="true">
+              <td class="letter {{if ne .Value ""}}placed{{end}}">
                 {{if ne .Value ""}}
                   {{.Value}}
                   <div class="points">
@@ -67,6 +67,39 @@
         {{end}}
       </table>
     </div>
+    <div class="stats">
+      <img src="/public/img/Scrabble-logo.png" width="422" alt="">
+      <div>
+        <img class="stats-title" src="/public/img/dl_gopher.png" height="125" width="auto" alt="">
+        <div class="stats-title" id="bag">
+          <h5 class="">Stats</h5>
+          <label class="stats-label" for="bag">Letters Remaining:</label>
+          <span class="stat-value">{{len .bag.Letters}}</span>
+        </div>
+      </div>
+
+      <div class="rack">
+        {{range .rack}}
+          <div class="letter tile placed item">
+            {{.Name}}
+            <div class="points">
+              {{.Value}}
+            </div>
+          </div>
+        {{end}}
+        <div class="word">
+          <h6>My Word</h6>
+          {{range .rack}}
+            <div class="item letter">
+              &nbsp
+            </div>
+          {{end}}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<script type="text/javascript">
+  document.querySelector(".rack").grabbable();
+</script>
 {{template "footer.html" .}}
