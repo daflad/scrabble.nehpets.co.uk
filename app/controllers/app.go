@@ -31,7 +31,7 @@ var scores = map[string]int{
 // Index page for now
 func (c App) Index() revel.Result {
 	board := pieces.DefualtBoard()
-	dat, err := ioutil.ReadFile(revel.AppPath + "scrabble.csv")
+	dat, err := ioutil.ReadFile(revel.AppRoot + "scrabble.csv")
 	if err != nil {
 		revel.AppLog.Error(err.Error())
 	}
