@@ -332,7 +332,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[14][14] = newTile(TripleWord)
 	b.Tiles[14][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
-	// Row 15
+	// Row 16
 	b.Tiles[15][0] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 	b.Tiles[15][1] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 	b.Tiles[15][2] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
@@ -350,7 +350,7 @@ func DefualtBoard() (b Board) {
 	b.Tiles[15][14] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 	b.Tiles[15][15] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 
-	// Row 15
+	// Row 17
 	b.Tiles[16][0] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 	b.Tiles[16][1] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}
 	b.Tiles[16][2] = Tile{Type: 1, Value: "", Points: 0, CSS: "empty-tile"}

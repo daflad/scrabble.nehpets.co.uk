@@ -19,6 +19,10 @@ func (c App) Game() revel.Result {
 	var bag pieces.Bag
 	bag.Fill()
 	rack := bag.RandomRack(7)
+	bag.RandomRack(7)
+	bag.RandomRack(7)
+	bag.RandomRack(7)
+	bag.RandomRack(5)
 	return c.Render(board, bag, rack)
 }
 

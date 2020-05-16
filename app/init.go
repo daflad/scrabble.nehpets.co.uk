@@ -39,6 +39,9 @@ func init() {
 	// String to upper case.
 	revel.TemplateFuncs["letterMarker"] = func(in int) string {
 		alph := "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		if in > 14 {
+			return ""
+		}
 		return string(alph[in])
 	}
 }
