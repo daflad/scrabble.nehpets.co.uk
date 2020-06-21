@@ -9,63 +9,86 @@
   </div>
 </div>
 <div class="container-fluid">
-  <div class="row board-egde">
-    <div class="board">
-      <table>
-        <tr>
-          <td class="position-marker"></td>
-          <td class="position-marker">1</td>
-          <td class="position-marker">2</td>
-          <td class="position-marker">3</td>
-          <td class="position-marker">4</td>
-          <td class="position-marker">5</td>
-          <td class="position-marker">6</td>
-          <td class="position-marker">7</td>
-          <td class="position-marker">8</td>
-          <td class="position-marker">9</td>
-          <td class="position-marker">10</td>
-          <td class="position-marker">11</td>
-          <td class="position-marker">12</td>
-          <td class="position-marker">13</td>
-          <td class="position-marker">14</td>
-          <td class="position-marker">15</td>
-        </tr>
-        {{range $i, $e := .board.Tiles}}
-          <tr>
-            <td class="position-marker">{{letterMarker $i}}</td>
-            {{range .}}
-              <td class="tile {{if ne .Type 1}}highlight-tile{{else}} {{if ne .CSS "empty-tile"}}shadow-tile{{end}} {{end}} {{.CSS}}">
-                {{if ne .Type 1}}
-                  {{if ne .CSS "double-word centre-star"}}
-                    {{.Type}}
-                  {{end}}
-                  {{if ne .Value ""}}
-                    {{raw .Value}}
-                  {{end}}
+  <div class="row">
+    <div class="col-7">
+      <div class="board-egde">
+        <div class="board">
+          <table>
+            <tr>
+              <td class="position-marker"></td>
+              <td class="position-marker">1</td>
+              <td class="position-marker">2</td>
+              <td class="position-marker">3</td>
+              <td class="position-marker">4</td>
+              <td class="position-marker">5</td>
+              <td class="position-marker">6</td>
+              <td class="position-marker">7</td>
+              <td class="position-marker">8</td>
+              <td class="position-marker">9</td>
+              <td class="position-marker">10</td>
+              <td class="position-marker">11</td>
+              <td class="position-marker">12</td>
+              <td class="position-marker">13</td>
+              <td class="position-marker">14</td>
+              <td class="position-marker">15</td>
+            </tr>
+            {{range $i, $e := .board.Tiles}}
+              <tr>
+                <td class="position-marker">{{letterMarker $i}}</td>
+                {{range .}}
+                  <td class="tile {{if ne .Type 1}}highlight-tile{{else}} {{if ne .CSS "empty-tile"}}shadow-tile{{end}} {{end}} {{.CSS}}">
+                    {{if ne .Type 1}}
+                      {{if ne .CSS "double-word centre-star"}}
+                        {{.Type}}
+                      {{end}}
+                      {{if ne .Value ""}}
+                        {{raw .Value}}
+                      {{end}}
+                    {{end}}
+                  </td>
                 {{end}}
-              </td>
+              </tr>
             {{end}}
-          </tr>
-        {{end}}
-      </table>
+          </table>
+        </div>
+        <div class="pieces">
+          <table>
+            {{range .board.Tiles}}
+              <tr>
+                {{range .}}
+                  <td class="letter {{if ne .Value ""}}placed{{end}}"  draggable="true">
+                    {{if ne .Value ""}}
+                      {{.Value}}
+                      <div class="points">
+                        {{.Points}}
+                      </div>
+                    {{end}}
+                  </td>
+                {{end}}
+              </tr>
+            {{end}}
+          </table>
+
+        </div>
+      </div>
     </div>
-    <div class="pieces">
-      <table>
-        {{range .board.Tiles}}
-          <tr>
-            {{range .}}
-              <td class="letter {{if ne .Value ""}}placed{{end}}"  draggable="true">
-                {{if ne .Value ""}}
-                  {{.Value}}
-                  <div class="points">
-                    {{.Points}}
-                  </div>
-                {{end}}
-              </td>
+    <div class="col-4">
+      <h3 class="pt-5">Scores</h3>
+      <hr>
+      <div class="row">
+        {{range .players}}
+          <div class="col-3">
+            <h4>{{.Name}}</h4>
+            {{range .Scores}}
+              {{if ne . 0 }}
+                <h6>{{.}}</h6>
+              {{end}}
             {{end}}
-          </tr>
+            <hr>
+            <h5{{if .Winner}} class="text-success"{{end}}>{{.Score}}</h5>
+          </div>
         {{end}}
-      </table>
+      </div>
     </div>
   </div>
 </div>
