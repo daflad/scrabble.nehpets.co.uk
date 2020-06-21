@@ -80,9 +80,7 @@
           <div class="col-3">
             <h4>{{.Name}}</h4>
             {{range .Scores}}
-              {{if ne . 0 }}
-                <h6>{{.}}</h6>
-              {{end}}
+              <h6>{{.}}</h6>
             {{end}}
             <hr>
             <h5{{if .Winner}} class="text-success"{{end}}>{{.Score}}</h5>

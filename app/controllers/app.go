@@ -72,14 +72,16 @@ func (c App) Index() revel.Result {
 		players = append(players, Player{Name: name, Scores: make([]int, 0)})
 		sum := 0
 		for _, line := range lines[1:] {
-			cells := strings.Split(line, ";")
-			if len(cells) > i {
-				score, err := strconv.Atoi(cells[i])
-				if err != nil {
-					revel.AppLog.Error(err.Error())
+			if len(line) > 1 {
+				cells := strings.Split(line, ";")
+				if len(cells) > i {
+					score, err := strconv.Atoi(cells[i])
+					if err != nil {
+						revel.AppLog.Error(err.Error())
+					}
+					sum += score
+					players[i].Scores = append(players[i].Scores, score)
 				}
-				sum += score
-				players[i].Scores = append(players[i].Scores, score)
 			}
 		}
 		players[i].Score = sum
