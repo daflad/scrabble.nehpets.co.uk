@@ -86,13 +86,15 @@ func (c App) Index() revel.Result {
 		}
 		players[i].Score = sum
 	}
-	max, index := 0, 0
+	max, index, agg := 0, 0, 0
 	for i, player := range players {
 		if max < player.Score {
 			max = player.Score
 			index = i
 		}
+		agg += player.Score
 	}
 	players[index].Winner = true
-	return c.Render(board, players)
+
+	return c.Render(board, players, agg)
 }
