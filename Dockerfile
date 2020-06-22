@@ -7,4 +7,4 @@ WORKDIR /go/src/github.com/daflad/scrabble.nehpets.co.uk
 
 ENTRYPOINT ./puller.sh & 2>&1 && revel run github.com/daflad/scrabble.nehpets.co.uk
 
-EXPOSE 2099
+EXPOSE 80
