@@ -92,10 +92,6 @@
   box-shadow: inset 2px 2px 2px 0px #FFFFFF, inset -2px 0px 2px 0px #000000;
 }
 
-.letter-char {
-  min-height: 45px;
-}
-
 .points {
   font-size: 10pt;
   position: relative;

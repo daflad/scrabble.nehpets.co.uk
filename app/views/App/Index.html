@@ -58,12 +58,12 @@
                 {{range .}}
                   <td class="letter {{if ne .Value ""}}placed{{end}}"  draggable="true">
                     {{if ne .Value ""}}
-                      <div class="letter-char">
-                        {{.Value}}
-                      </div>
-                      <div class="points">
-                        {{.Points}}
-                      </div>
+                      {{.Value}}
+                      {{if ne .Value " "}}
+                        <div class="points">
+                          {{.Points}}
+                        </div>
+                      {{end}}
                     {{end}}
                   </td>
                 {{end}}
